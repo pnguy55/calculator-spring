@@ -38,7 +38,7 @@ public class EquationJPAResource {
 	
 	
 	// retrieveAllUsers
-	@CrossOrigin(origins = {"http://localhost:3000", "http://calculator-react-spring.herokuapp.com", "https://calculator-react-spring.herokuapp.com"})
+	@CrossOrigin(origins = {"http://localhost:31000", "http://localhost:3000", "http://calculator-react-spring.herokuapp.com", "https://calculator-react-spring.herokuapp.com"})
 	@GetMapping(path="/postgres/equation/all")
 	public List<Equation> retrieveAllEquations() {
 		return equationRepository.findAll();
