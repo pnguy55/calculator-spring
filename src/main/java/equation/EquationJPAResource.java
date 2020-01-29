@@ -45,7 +45,7 @@ public class EquationJPAResource {
 //		return "hello";
 	}
 	
-	@CrossOrigin(origins = {"http://localhost:3000", "http://calculator-react-spring.herokuapp.com", "https://calculator-react-spring.herokuapp.com"})
+	@CrossOrigin(origins = {"http://localhost:31000", "http://localhost:3000", "http://calculator-react-spring.herokuapp.com", "https://calculator-react-spring.herokuapp.com"})
 	@GetMapping(path="/postgres/equation/{id}")
 	public Optional<Equation> retrieveEquationById(@PathVariable long id) {
 		Optional<Equation> equation = equationRepository.findById(id);
@@ -55,13 +55,13 @@ public class EquationJPAResource {
 		return equation;
 	}
 	
-	@CrossOrigin(origins = {"http://localhost:3000", "http://calculator-react-spring.herokuapp.com", "https://calculator-react-spring.herokuapp.com"})
+	@CrossOrigin(origins = {"http://localhost:31000", "http://localhost:3000", "http://calculator-react-spring.herokuapp.com", "https://calculator-react-spring.herokuapp.com"})
 	@GetMapping(path="/postgres/equation/count")
 	public long equationCount(){
 		return equationRepository.count();
 	}
 	
-	@CrossOrigin(origins = {"http://localhost:3000", "http://calculator-react-spring.herokuapp.com", "https://calculator-react-spring.herokuapp.com"})
+	@CrossOrigin(origins = {"http://localhost:31000", "http://localhost:3000", "http://calculator-react-spring.herokuapp.com", "https://calculator-react-spring.herokuapp.com"})
 	@PostMapping("/postgres/equation")
 	public ResponseEntity<Object> createUser(@RequestBody Equation equation) {
 
@@ -77,7 +77,7 @@ public class EquationJPAResource {
 		return ResponseEntity.created(location).build();
 	}
 	
-	@CrossOrigin(origins = {"http://localhost:3000","http://calculator-react-spring.herokuapp.com", "https://calculator-react-spring.herokuapp.com"})
+	@CrossOrigin(origins = {"http://localhost:31000", "http://localhost:3000","http://calculator-react-spring.herokuapp.com", "https://calculator-react-spring.herokuapp.com"})
 	@DeleteMapping("/postgres/equation/all")
 	public void deleteUser(){
 		equationRepository.deleteAll();
